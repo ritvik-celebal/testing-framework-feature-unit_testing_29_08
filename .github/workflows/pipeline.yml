@@ -118,8 +118,8 @@ jobs:
     name: "SonarQube Scan"
     needs: unit-tests
     if: always()
-    runs-on: 
-      group: udp-azure-nonprod
+    runs-on: ubuntu-latest
+      # group: udp-azure-nonprod
     env:
       SONAR_SCANNER_HOME: /opt/sonar-scanner
       SONAR_USER_HOME: /opt/sonar-scanner/.sonar
