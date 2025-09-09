@@ -15,8 +15,8 @@ permissions:
 
 jobs:
   unit-tests:
-    runs-on: 
-      group: udp-azure-nonprod
+    runs-on: ubuntu-latest
+      # group: udp-azure-nonprod
     strategy:
       matrix:
         python-version: ["3.11.9"]
