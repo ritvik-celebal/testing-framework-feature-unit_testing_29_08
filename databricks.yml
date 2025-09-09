@@ -1,0 +1,41 @@
+bundle:
+  name: udp_etl_framework
+ 
+include:
+  - resources/*.yml
+ 
+variables:
+  cluster_id:
+    description: "Databricks Cluster ID"
+  environment:
+    description: "Deployment  Environment"
+  policy_id:
+    description: "Policy ID for Job Clusters"
+ 
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://adb-1538821690907541.1.azuredatabricks.net
+      root_path: ~/dev
+    variables:
+      cluster_id: "0224-041610-39gnbqmd"
+      environment: "DEV"
+      policy_id: "000B9133A08ECD48"
+    permissions:
+      - group_name: "users" 
+        level: CAN_MANAGE
+ 
+  prod:
+    mode: production
+    workspace:
+      host: https://adb-1952435459722444.4.azuredatabricks.net
+      root_path: /Workspace/Shared/udp_etl_framework
+    variables:
+      cluster_id: "0321-074354-12ouilbh"
+      environment: "PROD"
+      policy_id: "000422FF13847E21"
+    permissions:
+      - group_name: "users" 
+        level: CAN_MANAGE

@@ -1,0 +1,66 @@
+# =============================================================================
+# UDP ETL Framework - Requirements
+# =============================================================================
+# Production and development dependencies for the UDP ETL Framework
+# Includes PySpark, Databricks, testing, and code quality tools
+
+# -----------------------------------------------------------------------------
+# Core Data Processing Dependencies
+# -----------------------------------------------------------------------------
+pyspark==3.5.*                    # Apache Spark for distributed data processing
+databricks-dlt                    # Databricks Delta Live Tables
+numpy==1.24.3                     # Fundamental package for scientific computing
+
+# -----------------------------------------------------------------------------
+# Development and Build Tools
+# -----------------------------------------------------------------------------
+setuptools                        # Python package development tools
+wheel                             # Built-package format for Python
+
+# -----------------------------------------------------------------------------
+# Code Quality and Linting
+# -----------------------------------------------------------------------------
+flake8==5.0.4                    # Python code linting and style checking
+pylint                            # Python static code analysis
+pylint-flask                      # Flask-specific pylint extensions
+sqlfluff                          # SQL linting and formatting
+sqlparse==0.4.4                   # SQL parsing library used by tests (e.g. test_syntax_check.py)
+
+# -----------------------------------------------------------------------------
+# Security and Pre-commit Hooks
+# -----------------------------------------------------------------------------
+detect-secrets                    # Detect secrets in code
+pre-commit                        # Git pre-commit hooks
+
+# -----------------------------------------------------------------------------
+# Testing Framework (Production + CI/CD)
+# -----------------------------------------------------------------------------
+pytest==7.4.3                    # Testing framework with advanced features
+pytest-cov==4.1.0                # Coverage plugin for pytest
+pytest-mock==3.12.0              # Thin wrapper around mock for pytest
+pytest-html==4.1.1               # HTML reports for pytest
+pytest-json-report==1.5.0        # JSON reports for pytest
+parameterized==0.9.0             # Parameterized testing utilities
+unittest2==1.1.0                 # Enhanced unittest framework
+mock==5.1.0                      # Mock object library for testing
+
+# -----------------------------------------------------------------------------
+# Code Coverage and Reporting
+# -----------------------------------------------------------------------------
+coverage==7.3.2                  # Code coverage measurement and reporting
+
+# -----------------------------------------------------------------------------
+# Jupyter and Notebook Support
+# -----------------------------------------------------------------------------
+jupyter                          # Jupyter notebook environment
+nbformat                         # Jupyter notebook format handling
+nbconvert                        # Convert Jupyter notebooks to other formats
+
+# =============================================================================
+# Notes:
+# - All versions are pinned where critical for stability
+# - PySpark version allows patch updates within 3.5.x
+# - Testing dependencies support both local development and CI/CD
+# - Security tools help maintain code quality and safety
+# - CI/CD dependencies merged from requirements-cicd.txt for unified management
+# =============================================================================

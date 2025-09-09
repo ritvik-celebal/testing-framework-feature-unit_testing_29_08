@@ -1,0 +1,43 @@
+# EventHub Utils Local Testing Requirements
+# Install with: pip install -r requirements_local.txt
+# 
+# These are the exact package versions from a working environment
+# Tested on Windows 11 with Python 3.12.6 and Java 17 LTS
+
+# Core PySpark and Data Processing
+pyspark==4.0.0
+py4j==0.10.9.9
+delta-spark==4.0.0
+findspark==2.0.1
+
+# Data Science Libraries
+pandas==2.3.2
+numpy==2.3.2
+python-dateutil==2.9.0.post0
+pytz==2025.2
+tzdata==2025.2
+
+# Testing Framework
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+pytest-spark==0.6.0
+coverage==7.10.5
+
+# Python Infrastructure
+packaging==25.0
+iniconfig==2.1.0
+pluggy==1.6.0
+importlib_metadata==8.7.0
+zipp==3.23.0
+six==1.17.0
+
+# Development Tools
+colorama==0.4.6
+
+# Package Management (will be upgraded automatically)
+pip==25.2
+
+               # Delta Lake for PySpark (optional - has fallback)
+             
+jsonschema==4.24.0 
