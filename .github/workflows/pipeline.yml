@@ -2,8 +2,8 @@ name: Build Validation
 
 on:
   workflow_dispatch:
-  # push:
-  #   branches: [feature/testing]
+  push:
+    branches: [main]
   pull_request:
     branches: [develop]
     types: [opened, synchronize, reopened]
